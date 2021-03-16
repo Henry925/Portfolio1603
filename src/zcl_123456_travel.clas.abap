@@ -18,7 +18,7 @@ METHOD if_oo_adt_classrun~main.
 
   DATA travels TYPE TABLE OF ZC_123456_TravelWithAgency.
   Data travel2 type ZC_123456_TravelWithAgency.
-    data reiseagenturnummer type c LENGTH 6 value '070050'.
+    data reiseagenturnummer type c LENGTH 6 value '070001'.
 
 
 
@@ -34,6 +34,10 @@ METHOD if_oo_adt_classrun~main.
     ENDIF.
 
 
+
+    LOOP AT travels into data(travel3).
+      travel3-AgencyAddress = ''.
+    ENDLOOP.
 
 
     DELETE travels WHERE Status = 'P' or Status = 'N' .
