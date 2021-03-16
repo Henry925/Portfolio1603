@@ -18,9 +18,14 @@ define view entity ZC_123456_travelwithagency as select from ZI_123456_Travelwit
     @Semantics.amount.currencyCode: 'CurrencyCode'
     Price,
     CurrencyCode,
+    @Search.defaultSearchElement: true
+    @Search.fuzzinessThreshold: 0.7
     Description,
     Status,
     AgencyID,
+    
+    @Search.defaultSearchElement: true
+    @Search.fuzzinessThreshold: 0.7
     _Agency.AgencyName as AgencyName,
     _Agency.CountryCode as CountryCode,
     _Agency.Address as AgencyAddress,
