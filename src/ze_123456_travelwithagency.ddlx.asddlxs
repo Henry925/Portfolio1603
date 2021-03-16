@@ -1,0 +1,74 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo:{
+    typeName: 'Travel',
+    typeNamePlural: 'Travels'
+}
+
+annotate view ZC_123456_travelwithagency
+    with 
+{
+@UI:{
+        lineItem: [{ position: 10 }],
+        identification: [{ position: 10 }]
+        
+  }
+    TravelId;
+ @UI:{
+        identification: [{ position: 20 }]}
+        
+    Duration;
+        @UI:{
+        selectionField: [{ position: 10 }],
+        lineItem: [{ position: 30 }],
+        identification: [{ position: 30 }]
+        
+  }   
+    
+    Price;
+    
+    @UI.hidden: true
+    
+    CurrencyCode;
+    
+      @UI:{
+        lineItem: [{ position: 20 }],
+        identification: [{ position: 40 }]
+  }   
+    Description;
+  
+        @UI:{
+        selectionField: [{ position: 20 }],
+        lineItem: [{ position: 40 }],
+        identification: [{ position: 50 }]
+  }   
+    
+    Status;
+    @UI:{
+        identification: [{ position: 60 }]}
+    AgencyID;
+        @UI:{
+        selectionField: [{ position: 30 }],      
+        lineItem: [{ position: 50 }],
+        identification: [{ position: 70 }]
+  }   
+  
+  
+    
+AgencyName;
+
+@UI:{
+        identification: [{ position: 90 }]}
+CountryCode;
+@UI:{
+        identification: [{ position: 80 }]}
+AgencyAddress;
+@UI:{
+        identification: [{ position: 100 }]}
+AgencyPhoneNumber;
+@UI:{
+        identification: [{ position: 110 }]}
+AgencyEmailAddress;
+    
+   
+  }  
+    

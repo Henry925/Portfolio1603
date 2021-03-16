@@ -1,12 +1,16 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Consumption view: Travel with Agency'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 @ObjectModel.usageType:{
     serviceQuality: #X,
     sizeCategory: #S,
     dataClass: #MIXED
+      
 }
+@Search.searchable: true
+@Metadata.allowExtensions: true
+
 define view entity ZC_123456_travelwithagency as select from ZI_123456_TravelwithAgency {
     
     key TravelId,
