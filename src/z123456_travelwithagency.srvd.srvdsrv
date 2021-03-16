@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Def'
+define service Z123456_TravelWithAgency {
+  expose ZC_123456_travelwithagency;
+}
